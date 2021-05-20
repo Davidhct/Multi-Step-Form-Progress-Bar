@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Progress Steps</title>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h2 id="title">Choose number of nodes between 2 - 10:</h2>
+        <input type="number" name="" id="num-node" />
+        <button class="btn" id="set-node">Set</button>
+      </header>
+      <section class="progress-container">
+        <article class="progress" id="progress"></article>
+        <article class="circle active">1</article>
+        <article class="circle">2</article>
+        <article class="circle">3</article>
+        <article class="circle">4</article>
+      </section>
+      <button class="btn" id="prev" disabled>Prev</button>
+      <button class="btn" id="next">Next</button>
+      <button class="btn" id="time">Time</button>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
