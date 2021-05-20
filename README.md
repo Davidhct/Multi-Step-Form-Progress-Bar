@@ -1,6 +1,6 @@
 # Progress-Bar
 
-Live link to try the project: https://davidhct.github.io/Flexible-Album/
+Live link to try the project: https://davidhct.github.io/Progress-Bar/
 
 ### Summary
 
