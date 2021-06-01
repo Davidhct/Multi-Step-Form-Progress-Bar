@@ -1,6 +1,6 @@
 # Progress-Bar
 
-Live link to try the project: https://davidhct.github.io/Progress-Bar/
+Live link to try the project: https://davidhct.github.io/Multi-Step-Form-Progress-Bar/
 
 ### Summary
 
