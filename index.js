@@ -18,14 +18,12 @@ function removeNodes() {
 }
 
 function moveNext() {
-  console.log("1");
   currentActive++;
 
   if (currentActive > circles.length) {
     currentActive = circles.length;
   }
   update();
-  console.log(circle);
 }
 
 function movePrev() {
@@ -52,7 +50,6 @@ function reset() {
 function update() {
   circles.forEach((circle, index) => {
     if (index < currentActive) {
-      console.log(circle);
       circle.classList.add("active");
     } else {
       circle.classList.remove("active");
