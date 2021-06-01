@@ -10,25 +10,41 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Progress Steps</title>
+    <title>Multi Step Form Progress Bar</title>
   </head>
   <body>
     <main class="container">
-      <header>
-        <h2 id="title">Choose number of nodes between 2 - 10:</h2>
-        <input type="number" name="" id="num-node" />
-        <button class="btn" id="set-node">Set</button>
+      <header class="form-header">
+        <h2 class="title-header">Sign-Up Form</h2>
+        <section class="progress-container">
+          <article class="progress" id="progress"></article>
+          <article class="step">
+            <p class="circle active">1</p>
+            <strong>Info</strong>
+          </article>
+          <article class="step">
+            <p class="circle">2</p>
+            <strong>Contact</strong>
+          </article>
+          <article class="step">
+            <p class="circle">3</p>
+            <strong>Account</strong>
+          </article>
+          <article class="step">
+            <p class="circle">4</p>
+            <strong>Finish</strong>
+          </article>
+        </section>
       </header>
-      <section class="progress-container">
-        <article class="progress" id="progress"></article>
-        <article class="circle active">1</article>
-        <article class="circle">2</article>
-        <article class="circle">3</article>
-        <article class="circle">4</article>
+      <section class="basic-info">
+        <h1>Basic Info:</h1>
+        <input type="text" name="" id="first-name" placeholder="First Name" />
+        <input type="text" name="" id="last-name" placeholder="Last Name" />
+        <input type="text" name="" id="user-name" placeholder="User-Name" />
       </section>
+
       <button class="btn" id="prev" disabled>Prev</button>
       <button class="btn" id="next">Next</button>
-      <button class="btn" id="time">Time</button>
     </main>
     <script src="./index.js"></script>
   </body>
