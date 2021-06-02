@@ -109,7 +109,7 @@ body {
   border-color: var(--line-border-fill);
 }
 
-.basic-info {
+.info {
   display: flex;
   height: 41vh;
   width: 40vw;
@@ -125,12 +125,17 @@ body {
   margin-bottom: 1rem;
 }
 
-.basic-info input {
+.info input,
+#about-yourself {
   height: 5vh;
   padding-left: 0.5rem;
   border-radius: 5px;
   outline: none;
   border: none;
+}
+.info #about-yourself {
+  height: 10vh;
+  padding-top: 0.5rem;
 }
 
 .btn {
