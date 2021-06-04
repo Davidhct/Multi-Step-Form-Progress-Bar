@@ -5,6 +5,19 @@ let progress = document.getElementById("progress");
 let circles = document.querySelectorAll(".circle");
 let infos = document.querySelectorAll(".info");
 
+document
+  .querySelector(".see-password")
+  .addEventListener("mouseup", seeOffPassword);
+document
+  .querySelector(".see-password")
+  .addEventListener("mousedown", seePassword);
+document
+  .querySelector(".see-confirm-password")
+  .addEventListener("mouseup", seeOffPassword);
+document
+  .querySelector(".see-confirm-password")
+  .addEventListener("mousedown", seePassword);
+
 next.addEventListener("click", moveNext);
 prev.addEventListener("click", movePrev);
 
@@ -31,7 +44,7 @@ function moveNext() {
   }
 
   let tmp = currentNotHidden;
-  console.log(tmp);
+
   infos[currentNotHidden].classList.remove("hidden");
   infos[--tmp].classList.add("hidden");
 
@@ -50,7 +63,7 @@ function movePrev() {
   }
 
   let tmp = currentNotHidden;
-  console.log(tmp);
+
   infos[currentNotHidden].classList.remove("hidden");
   infos[++tmp].classList.add("hidden");
 
@@ -77,14 +90,6 @@ function update() {
       circle.classList.remove("active");
     }
   });
-  // infos.forEach((info, index) => {
-  //   if (index === currentNotHidden) {
-  //     info.classList.add("hidden");
-  //     console.log(index, "ddd ", currentNotHidden);
-  //   } else if (index < currentNotHidden) {
-  //     info.classList.remove("hidden");
-  //   }
-  // });
 
   styleLine();
 
@@ -104,4 +109,28 @@ function styleLine() {
     let line = ((active.length - 1) / (circles.length - 1)) * 100 + "%";
     progress.style.width = line;
   });
+}
+
+function seePassword() {
+  if (this.classList.value === "see-password") {
+    let input = document.getElementById("password");
+    input.type = "text";
+    this.src = "./css/images/see_icon.png";
+  } else if (this.classList.value === "see-confirm-password") {
+    let input = document.getElementById("confirm-password");
+    input.type = "text";
+    this.src = "./css/images/see_icon.png";
+  }
+}
+
+function seeOffPassword() {
+  if (this.classList.value === "see-password") {
+    let input = document.getElementById("password");
+    input.type = "password";
+    this.src = "./css/images/see_icon_off.png";
+  } else if (this.classList.value === "see-confirm-password") {
+    let input = document.getElementById("confirm-password");
+    input.type = "password";
+    this.src = "./css/images/see_icon_off.png";
+  }
 }

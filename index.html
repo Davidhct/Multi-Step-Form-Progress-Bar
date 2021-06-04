@@ -38,8 +38,20 @@
       </header>
       <section class="info">
         <h1>Basic Info:</h1>
-        <input type="text" name="" id="first-name" placeholder="First Name" />
-        <input type="text" name="" id="last-name" placeholder="Last Name" />
+        <div class="name-div">
+          <input type="text" name="" id="first-name" placeholder="First Name" />
+          <input type="text" name="" id="last-name" placeholder="Last Name" />
+        </div>
+        <div class="gender-age-div">
+          <select name="" id="select-gender">
+            <option value="gender" disabled selected>Genger</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="other">other</option>
+          </select>
+          <input type="number" name="" id="age" placeholder="Age" />
+          <input type="date" name="" id="birth-day" />
+        </div>
         <textarea
           name=""
           id="about-yourself"
@@ -62,13 +74,39 @@
       <section class="info hidden">
         <h1>Account Info:</h1>
         <input type="text" name="" id="user-name" placeholder="User Name" />
-        <input type="password" name="" id="password" placeholder="Password" />
-        <input
-          type="password"
-          name=""
-          id="confirm-password"
-          placeholder="Confirm Password"
-        />
+        <div class="password-div">
+          <input
+            type="password"
+            name=""
+            class="password-input"
+            id="password"
+            placeholder="Password"
+          />
+          <img
+            src="./css/images/see_icon_off.png"
+            alt=""
+            class="see-password"
+          />
+        </div>
+        <div class="password-div">
+          <input
+            type="password"
+            name=""
+            class="password-input"
+            id="confirm-password"
+            placeholder="Confirm Password"
+          />
+          <img
+            src="./css/images/see_icon_off.png"
+            alt=""
+            class="see-confirm-password"
+          />
+        </div>
+      </section>
+      <section class="info hidden">
+        <h1>Success !</h1>
+        <p id="success">✅</p>
+        <h3 id="bottom-title">You Have Successfully Sign Up!</h3>
       </section>
 
       <button class="btn" id="prev" disabled>Prev</button>
